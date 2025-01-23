@@ -48,6 +48,11 @@ app.get('/', (req, res) => {
     res.send('Bienvenue sur le serveur backend');
 });
 
+// Route pour vérifier si le serveur fonctionne
+app.get('/health', (req, res) => {
+    res.send({ status: 'Le serveur fonctionne correctement' });
+});
+
 app.post('/api/emails', async (req, res) => {
     try {
         const { email } = req.body;
