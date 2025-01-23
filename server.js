@@ -1,15 +1,10 @@
 const express = require('express');
 const fs = require('fs').promises;
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
-app.use(
-    cors({
-        origin: ["https://minima-frontend-nfvb.vercel.app"],
-        credentials: true,
-        exposedHeaders: ["set-cookie"],
-    })
-);
+app.use(cors());
 app.use(express.json());
 
 // Fonction pour extraire l'email d'une ligne
