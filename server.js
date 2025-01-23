@@ -89,7 +89,7 @@ app.get('/api/emails', async (req, res) => {
     }
 });
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Serveur démarré sur le port ${PORT}`);
 });
