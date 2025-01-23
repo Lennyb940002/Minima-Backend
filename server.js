@@ -43,6 +43,11 @@ async function checkEmailExists(newEmail) {
     }
 }
 
+// Définir une route pour la racine
+app.get('/', (req, res) => {
+    res.send('Bienvenue sur le serveur backend');
+});
+
 app.post('/api/emails', async (req, res) => {
     try {
         const { email } = req.body;
